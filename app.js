@@ -7,6 +7,7 @@ var db = require("./models");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var hotelsRouter = require('./routes/hotels');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/hotels', hotelsRouter);
 
 db.sequelize.sync({ force: false })
 
