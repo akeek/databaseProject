@@ -1,6 +1,6 @@
 async function deleteHotel(url, hotelId) {
     await fetch(url, {
-        method: 'DELETE',
+        method: "DELETE",
         headers: {
             "Content-type": "application/json",
         },

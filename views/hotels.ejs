@@ -12,12 +12,12 @@
           <span class="col py-1 bg-info"><%=hotel.Name%><span class="right"><%=hotel.Location%></span></span>
           <a href="/rooms/<%=hotel.id%>" class="col btn btn-secondary"> Rent a room</a>
           <a href="/hotels/<%=hotel.id%>" class="col btn btn-secondary"> Details</a>
-          <button onclick="deleteHotel('http\:\/\/localhost:8080\/hotels\/','<%hotel.id%>')" class="col btn btn-secondary">Delete</button>
+          <button onclick="deleteHotel('http\:\/\/localhost:8080\/hotels\/','<%=hotel.id%>')" class="col btn btn-secondary">Delete</button>
         </div>
       <% }); %>
     </div>
     <button onclick="addHotel('http\:\/\/localhost:8080\/hotels\/')" class="col btn btn-success">Add a new hotel</button>
-    <script src="../public/javascripts/addHotel.js"></script>
-    <script src="../public/javascripts/deleteHotel.js"></script>
+    <script src="../javascripts/addHotel.js"></script>
+    <script src="../javascripts/deleteHotel.js"></script>
   </body>
 </html>

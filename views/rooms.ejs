@@ -9,10 +9,13 @@
     <div class="list-group">
       <% rooms.forEach(function(room) { %>
         <div class="row px-3 py-1 w-100">
-          <span class="col py-1 bg-info">Room for <%=room.Capacity%> people<span class="right">Daily cost: <%=room.PricePerDay%></span></span>
-          <button class="col btn btn-secondary"> Rent a room</button>
+          <span class="col py-1 <%=room.Users ? 'bg-warning' : 'bg-info' %>">Room for <%=room.Capacity%> people<span class="right">Daily cost: <%=room.PricePerDay%></span></span>
+          <button onclick="makeReservation(1,'<%=room.id%>',
+            'http\:\/\/localhost:8080\/rooms\/reservation')"
+            class="col btn btn-secondary"> Rent a room</button>
         </div>
       <% }); %>
     </div>
+    <script src="../javascripts/makeReservation.js"></script>
   </body>
 </html>
